@@ -7,25 +7,44 @@
   </head>
   <body>
 
+    <input type="number" id="inp" placeholder="sayi giriniz" />
+        <button onclick="isPalindrome()">Hesapla</button>
+        <h3 class="result"></h3>
 
 
     <script>
-      function reverseNumber(number) {
-    var numString = number.toString(); // Sayıyı stringe çevir
-    var reversedString = ''; // Tersine çevrilecek string
-    
-    // Sayının her bir karakterini tersten alarak yeni bir dize oluştur
-    for (var i = numString.length - 1; i >= 0; i--) {
-        reversedString += numString.charAt(i);
+
+    function isPalindrome(number) {
+    let reversedNumber = 0;
+    let originalNumber = number;
+    let resultEl = document.querySelector(".result");
+
+    // Sayının tersini bulmak için:
+    while (number > 0) {
+        let digit = number % 10;
+        reversedNumber = reversedNumber * 10 + digit;
+        number = Math.floor(number / 10);
     }
+
+    // Palindrome mu?
     
-    return reversedString;
+    if (originalNumber == reversedNumber) {
+      return document.querySelector(".result").innerHTML = ` palindromedur `;
+    } else {
+      return document.querySelector(".result").innerHTML= ` palindrome değildir `;
+    }
 }
 
-// Örnek kullanım
-var num = 12345;
-var reversedNum = reverseNumber(num);
-console.log("Girilen sayının tersi: " + reversedNum);
+// console icin:
+let num = 1221;
+if (isPalindrome(num)) {
+    console.log(num + " bir palindrome sayıdır.");
+} else {
+    console.log(num + " bir palindrome sayı değildir.");
+}
+
+
+
     </script>
   </body>
 </html>
