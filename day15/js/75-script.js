@@ -19,7 +19,7 @@ document.querySelector("#btnShow").addEventListener("click", () => {
         }
 	});
 });
-
+//önce burayı yaptık tabloyu olusturduk: 
 const loadData = () => {
 	let listEl = "";
 	students.forEach((student, index) => {
@@ -32,5 +32,7 @@ const loadData = () => {
 
 	document.querySelector("#tblStudents tbody").innerHTML = listEl;
 };
+
+
 
 loadData();
