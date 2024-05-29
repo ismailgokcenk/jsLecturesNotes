@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom-1</title>
+  </head>
+  <body>
+    <h1>HELLO DOM</h1>
+    <p class="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quaerat
+      aliquid quibusdam velit at natus, dolore culpa repudiandae numquam
+      doloremque
+      <span style="color: red">maxime, fuga voluptate delectus</span> corporis
+      exercitationem atque, quos labore ipsa.
+    </p>
+    <ul class="menu">
+      <li>Hamsi</li>
+      <li>Ates</li>
+      <li><strong>Misir Unu</strong></li>
+    </ul>
+    <h2>H2 Element</h2>
+    <script>
+      let h1El = document.querySelector("h1");
+      console.log(h1El);
+      console.log(h1El.innerText);
+
+      let pEl = document.querySelector(".text");
+      console.log(pEl.innerHTML);
+      console.log(pEl.innerText);
+
+      let menuEl = document.querySelector(".menu li:last-child");
+      console.log(menuEl.innerHTML);
+
+      let menuEl2 = document.querySelector(".menu li:nth-child(2)");
+      console.log(menuEl2.innerHTML);
+      
+      let h2El = document.querySelector("h2");
+      h2El.innerHTML = ` <strong> Seni sevmiyorum artik H2 Elementi yok ol git </strong> `;
+      h2El.innerHTML = ` saka yaptim gel gel `;
+      h1El.innerText = ` kaslarin  arasina Dom dom kursunu degdi :)`;
+    </script>
+  </body>
+</html>
