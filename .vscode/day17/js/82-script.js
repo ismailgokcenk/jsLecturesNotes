@@ -46,12 +46,13 @@ document.querySelectorAll("#btnDelete").forEach((item)=>{
 		//console.log(name)
 
 		const result=confirm(`Are you sure you want to delete ${name}?`)
+		console.log(result)
 
 		//TODO
-	/* 	if(result){
-
+		if(result){
+			e.target.closest("tr").remove()
 		}
- */
+
 
 	})
 })
